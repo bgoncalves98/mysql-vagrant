@@ -1,0 +1,9 @@
+CREATE USER IF NOT EXISTS 'vagrant'@'%' IDENTIFIED BY 'vagrant';
+
+CREATE DATABASE IF NOT EXISTS mysqlteste;
+
+ALTER DATABASE mysqlteste
+  DEFAULT CHARACTER SET utf8
+  DEFAULT COLLATE utf8_general_ci;
+
+GRANT ALL PRIVILEGES ON mysqlteste.* TO 'vagrant'@'%' IDENTIFIED BY 'vagrant';
